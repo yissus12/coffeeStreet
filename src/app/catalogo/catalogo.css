@@ -1,0 +1,61 @@
+.carta{
+    display: flex;
+    border: 2px solid #000000;
+    flex-direction: column;
+    width: 300px;
+    justify-content: center;
+    margin: 10px;
+}
+.imagen{    
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+    .imagen > img{
+    border: #000000 2px solid;
+    width: 250px;
+    height: 300px;
+    }
+.nombre-Popularidad{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.tituloProducto{display: flex;}
+    .tituloProducto > h4{}
+.popularidad{display: flex;}
+    .popularidad > h4{}
+
+.descripcion-boton{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    
+}
+.descripcion{
+    display: flex;
+    width: 300px;
+    padding-left: 10px;
+}
+    .descripcion > p{
+        display: flex;
+    }
+
+button{
+    display: flex;
+    width: 15%;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+    button > img{
+        display: flex;
+        width: 30px
+    }
