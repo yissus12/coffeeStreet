@@ -25,4 +25,7 @@ export class Catalogo implements OnInit {
   ngOnInit():void {
     this.cargarProductos();
   }
+  consoleLog(){
+    console.log(this.productos);
+  }
 }

@@ -1,15 +1,15 @@
-<div class="carta" >
+<div class="carta"  *ngFor="let producto of productos">
     <div class="imagen">
         <img src="/imagenes/compras.png" alt="">
     </div>
 
 <div class="nombre-Popularidad">
     <div class="tituloProducto">
-        <h4 *ngFor="let producto of productos"></h4>
+        <h4> {{producto.nombre}}</h4>
     </div>
 
     <div class="popularidad">
-        <h4> 12 k</h4>
+        <h4>{{producto.precio}}</h4>
     </div>
 </div>
 
