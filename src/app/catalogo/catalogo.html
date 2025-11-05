@@ -1,4 +1,6 @@
-<div class="carta"  *ngFor="let producto of productos">
+<div class="amin-cartas">
+<div class="cartas "*ngFor="let producto of productos">
+<div class="carta"  >
     <div class="imagen">
         <img src="/imagenes/compras.png" alt="">
     </div>
@@ -9,14 +11,14 @@
     </div>
 
     <div class="popularidad">
-        <h4>{{producto.precio}}</h4>
+        <h4>S/{{producto.precio }}</h4>
     </div>
 </div>
 
 <div class="descripcion-boton">
 
     <div class="descripcion">
-        <p>Lorem ipsum dolor sit, ametasdaaaaaaaaaa asdconsecteturadipisicing elitlosaddd. </p>
+        <p>{{producto.descripcion}}</p>
     </div>
 
 
@@ -25,4 +27,6 @@
     </button>
 
     </div>
+</div>
+</div>
 </div>
