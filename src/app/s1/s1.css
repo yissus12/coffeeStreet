@@ -31,6 +31,7 @@
 .delivery-service {
     max-width: 1200px;
     margin: 0 auto;
+    background:  linear-gradient(135deg, #f5e6d3 0%, #c6a68b 100%);
 }
 
 .service-header {
@@ -63,6 +64,7 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
     align-items: start;
+    background:  linear-gradient(135deg, #f5e6d3 0%, #c6a68b 100%);
 }
 
 .step-card {
