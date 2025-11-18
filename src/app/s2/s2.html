@@ -35,7 +35,7 @@
                 </p>
 
                 <a href="#menu" class="cta-button" role="button" aria-label="Ver nuestro menú de cafés">
-                    Get your coffee
+                    Obten tu café
                     <svg class="cta-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" />
@@ -47,3 +47,23 @@
 
     <!-- termina el footer -->
 </body>
+
+    <!-- ======================= CHATBOT ========================= -->
+
+    <!-- Chatbot HTML (Angular bindings) -->
+    <div id="chatbot-btn" (click)="toggleChat()">💬</div>
+
+    <div id="chatbot-window" [style.display]="showChat ? 'flex' : 'none'">
+        <div id="chatbot-header">CoffeeBot ☕</div>
+
+        <div id="chatbot-messages">
+            <div *ngFor="let m of messages" [class.bot-msg]="m.sender === 'bot'" [class.user-msg]="m.sender === 'user'">
+                {{ m.text }}
+            </div>
+        </div>
+
+        <div id="chatbot-input-area">
+            <input #chatInput type="text" id="chatbot-input" placeholder="Escribe un mensaje..." (keyup.enter)="sendMessage(chatInput.value, chatInput)">
+            <button id="chatbot-send" (click)="sendMessage(chatInput.value, chatInput)">➤</button>
+        </div>
+    </div>
