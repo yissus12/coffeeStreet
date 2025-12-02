@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { Principal } from './principal/principal';
 import { Nav } from './nav/nav';
 import { Footer } from "./footer/footer";
+import { Chatbot } from './chatbot/chatbot';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Principal, Nav, Footer],
+  imports: [RouterOutlet, Principal, Nav, Footer, Chatbot],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

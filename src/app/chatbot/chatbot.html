@@ -1,0 +1,24 @@
+<div id="chatbot-btn" (click)="toggle()">💬</div>
+
+<div id="chatbot-window" [style.display]="open ? 'flex' : 'none'">
+  <div id="chatbot-header">CoffeeBot ☕ <button class="clear-btn" (click)="clearChat()">Limpiar</button></div>
+
+  <div id="chatbot-messages" #messagesContainer>
+    <div *ngFor="let m of messages" [class.user-bubble]="m.from === 'user'" [class.bot-bubble]="m.from === 'bot'">{{ m.text }}</div>
+    <div *ngIf="isTyping" class="typing-indicator">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <div id="chatbot-options">
+    <button *ngFor="let o of options" class="option-btn" (click)="selectOption(o)">{{ o.text }}</button>
+  </div>
+
+  <div id="chatbot-input-area">
+    <input id="chatbot-input" [(ngModel)]="messageText" type="text" placeholder="Escribe un mensaje..." />
+    <button id="chatbot-send" (click)="sendMessage()">Enviar</button>
+  </div>
+</div>
+ 
