@@ -1,32 +1,27 @@
 <div class="amin-cartas">
-<div class="cartas "*ngFor="let producto of productos">
-<div class="carta"  >
-    <div class="imagen">
-        <img src="/imagenes/compras.png" alt="">
+    <div class="cartas" *ngFor="let producto of productos">
+        <div class="carta">
+            <div class="imagen">
+                <img src="{{producto.imgen}}" alt="">
+            </div>
+
+            <div class="nombre-Popularidad">
+                <div class="tituloProducto">
+                    <h4>{{producto.nombre}}</h4>
+                </div>
+                <div class="popularidad">
+                    <h4>S/{{producto.precio}}</h4>
+                </div>
+            </div>
+
+            <div class="descripcion-boton">
+                <div class="descripcion">
+                    <p>{{producto.descripcion}}</p>
+                </div>
+                <button class="btn-compra">
+                    <img src="/imagenes/compras.png" alt="">
+                </button>
+            </div>
+        </div>
     </div>
-
-<div class="nombre-Popularidad">
-    <div class="tituloProducto">
-        <h4> {{producto.nombre}}</h4>
-    </div>
-
-    <div class="popularidad">
-        <h4>S/{{producto.precio }}</h4>
-    </div>
-</div>
-
-<div class="descripcion-boton">
-
-    <div class="descripcion">
-        <p>{{producto.descripcion}}</p>
-    </div>
-
-
-    <button>
-        <img src="/imagenes/compras.png" alt="">
-    </button>
-
-    </div>
-</div>
-</div>
 </div>

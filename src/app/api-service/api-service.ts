@@ -13,12 +13,18 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
+  private urlUsuario = 'http://localhost:8080/usuario'; 
+
   private urlProducto= 'http://localhost:8080/producto';
 
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<any[]> {
     return this.http.get<any[]>(`${this.urlProducto}/listar`);
+  }
+    // Crear usuario sin modelo
+  crearUsuario(usuario: any): Observable<any> {
+    return this.http.post<any>(`${this.urlUsuario}`, usuario);
   }
 
 } 
